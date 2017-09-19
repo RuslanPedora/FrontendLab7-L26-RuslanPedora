@@ -71,10 +71,7 @@ app.directive('studentList', function factory() {
                             </td>\
                         </tr>\
                     </tbody>\
-                  </table>',
-        controler: function() {
-
-        }
+                  </table>'
     };
   });
 
