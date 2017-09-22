@@ -31,12 +31,12 @@ app.controller('stdController', ['$scope', '$state', '$transitions', function($s
                 photo: 'https://lh3.googleusercontent.com/mq-rxSLITU7pD5zTsZFBX7ud5ugkyqvmkCEnsswQ10t4A9WuTd5OsIu2boH0kFSm4O4=w300'
             },
             {  
-                name: 'Ityna',
+                name: 'Iryna',
                 surname: 'Fedulova',
                 birthDate: new Date(),
                 phoneNumber: '555-55-55',
                 photo: 'https://i.pinimg.com/736x/7d/0e/64/7d0e64e360753dd00c022cea376cd51a--beautiful-smile-beautiful-people.jpg'
-            },
+            }
         ];
         $scope.goToStudent = function(id) {
             $state.go(`student`, {id});
@@ -61,7 +61,7 @@ app.directive('studentList', function factory() {
                     <tbody>\
                         <tr ng-repeat="(key,val) in students" ng-click="goToStudent(key)" class="clickable">\
                             <td>\
-                                <img src=\'{{val.photo}}\'>\
+                                <img ng-src="{{val.photo}}" alt="Student pic.">\
                             </td>\
                             <td>\
                                 {{val.name}}\
